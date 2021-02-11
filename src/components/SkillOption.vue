@@ -31,10 +31,7 @@ export default {
     optionClicked() {
       this.$emit('selected', this.optionName);
     }
-  },
-  data: () => ({
-    logo: require('@/assets/' + this.optionName + '.png')
-  })
+  }
 };
 </script>
 
