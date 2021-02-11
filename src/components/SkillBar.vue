@@ -1,6 +1,11 @@
 <template>
-  <div class="background-bar">
-    <div class="top-bar" :style="topBoxStyle"></div>
+  <div class="background-bar" :style="cssProps">
+    <div
+      class="top-bar"
+      :style="topBoxStyle"
+      v-bind:class="{ animationin: doTransition }"
+      v-on:animationend="doTransition = false"
+    ></div>
   </div>
 </template>
 
@@ -9,7 +14,9 @@ export default {
   name: 'SkillBar',
   data() {
     return {
-      hovering: false
+      doTransition: false,
+      newWidth: 0,
+      oldWidth: 0
     };
   },
   props: {
@@ -21,11 +28,19 @@ export default {
   computed: {
     topBoxStyle() {
       return 'width: ' + this.skillPrcnt + '%';
+    },
+    cssProps() {
+      return {
+        '--old-box-width': this.oldWidth + '%',
+        '--top-box-width': this.newWidth + '%'
+      };
     }
   },
-  methods: {
-    mouseOver() {
-      this.hovering = !this.hovering;
+  watch: {
+    skillPrcnt(newValue, oldValue) {
+      this.newWidth = newValue;
+      this.oldWidth = oldValue;
+      this.doTransition = true;
     }
   }
 };
@@ -45,6 +60,17 @@ export default {
   background-color: #3a74aa;
   height: 100%;
   z-index: 1;
+}
+.animationin {
+  animation: showHide 1s ease-out alternate;
+}
+@keyframes showHide {
+  0% {
+    width: var(--old-box-width);
+  }
+  100% {
+    width: var(--top-box-width);
+  }
 }
 
 .prcnt-number {

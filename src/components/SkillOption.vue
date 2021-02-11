@@ -1,13 +1,13 @@
 <template>
-  <div @click="optionClicked">
+  <div @click="optionClicked" class="parent-container fill-height">
     <v-img
       :src="img"
       aspect-ratio="1"
-      class="transparent"
+      class="transparent logo-image grow fill-height"
       contain
-      max-width="250"
-      max-height="250"
-      min-height="128"
+      max-width="212"
+      max-height="212"
+      min-height="52"
       min-width="52"
     >
     </v-img>
@@ -39,7 +39,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.parent-row {
+.parent-container {
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-image {
+  margin: auto;
+}
+.active {
+  background-color: rgb(47, 79, 79);
 }
 </style>

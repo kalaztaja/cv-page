@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-card class="overflow-hidden" tile flex height="100%" dark>
-      <v-main class="content-container">
+    <v-card class="overflow-hidden ambient" tile flex height="100%" dark>
+      <v-main class="content-container transparent">
         <v-container fluid fill-height>
           <introduction-card></introduction-card>
           <skill-catalog width="100%" />
@@ -48,5 +48,27 @@ export default {
 <style>
 html {
   overflow-y: auto !important;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.ambient {
+  background: linear-gradient(-45deg, #27408e, #304faf, #787b85, #93959d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>

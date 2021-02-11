@@ -17,7 +17,7 @@ const SkillStore = {
         },
         {
           name: 'This site',
-          link: '',
+          link: 'https://github.com/kalaztaja/cv-page',
           description: 'Two day project to showcase different skills'
         }
       ]

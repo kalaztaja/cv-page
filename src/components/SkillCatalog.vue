@@ -4,13 +4,23 @@
       <v-col
         v-for="(skill, idx) in this.SkillStore"
         v-bind:key="idx"
-        class="d-flex child-flex"
+        class="child-flex column-container"
         cols="4"
+        @click="activeOption = idx"
         ><skill-option
           :optionName="skill.Name"
           :img="skill.Img"
           @selected="showDetails($event)"
-        ></skill-option
+          :class="{ active: idx === activeOption }"
+          ><template v-slot:placeholder>
+            <v-row class="fill-height ma-0" align="center" justify="center">
+              <v-progress-circular
+                indeterminate
+                color="grey lighten-5"
+              ></v-progress-circular>
+            </v-row>
+          </template>
+          <v-spacer /></skill-option
       ></v-col>
     </v-row>
     <skill-card
@@ -35,25 +45,20 @@ export default {
       SkillStore: SkillStore.data,
       currentDetails: '',
       currentSkillLevel: 0,
-      currentContent: []
+      currentContent: [],
+      activeOption: null
     };
   },
   methods: {
     showDetails(optionName) {
-      console.log(optionName);
       this.changeDetails(optionName);
     },
     changeDetails(optionName) {
       const selectedElement = this.SkillStore.find(
         element => element.Name === optionName
       );
-      console.log(this.SkillStore);
-      console.log(selectedElement);
       this.currentDetails = selectedElement.Name;
       this.currentSkillLevel = selectedElement.SkillLevel;
-
-      console.log('after');
-      console.log(selectedElement.Projects);
       this.currentContent = selectedElement.Projects;
     }
   }
@@ -76,9 +81,8 @@ export default {
 .catalog-container {
   display: flow-root;
   width: 100%;
-  background-color: rgb(47, 79, 79);
+  background-color: #1e1e1e;
   padding: 1em;
-  border-radius: 25px;
   overflow: hidden;
   display: flex;
   align-items: stretch;
