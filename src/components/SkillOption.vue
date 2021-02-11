@@ -7,8 +7,8 @@
       contain
       max-width="212"
       max-height="212"
-      min-height="52"
-      min-width="52"
+      min-height="32"
+      min-width="32"
     >
     </v-img>
   </div>

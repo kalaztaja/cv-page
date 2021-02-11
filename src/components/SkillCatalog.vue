@@ -72,13 +72,16 @@ export default {
   float: left;
   order: 1;
   padding-right: 0;
-  border-right: black solid 4px;
+  border-right: black solid 0.5vmin;
 }
 .skill-card {
   max-width: 50%;
   min-width: 50%;
   float: right;
   order: 2;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
 }
 .catalog-container {
   display: flow-root;

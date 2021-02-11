@@ -11,8 +11,9 @@
         two-line
         v-for="(project, indx) in this.skillContent"
         v-bind:key="indx"
+        class="no-left-right-padding"
       >
-        <v-col cols="12">
+        <v-col cols="12" class="no-left-right-padding">
           <v-card class="skill-card" :color="cardColors[indx % 2]">
             <v-card-title class="project-name"
               >{{ project.name }}
@@ -96,10 +97,10 @@ export default {
   grid-column-start: 1;
   grid-column-end: 3;
   overflow-y: scroll;
-  min-width: 600px;
+  max-height: 440px;
 }
 .skill-name {
-  font-size: 2em;
+  font-size: 4vmin;
   font-weight: bold;
   margin-top: 0.5em;
 }
@@ -108,7 +109,14 @@ export default {
   font-weight: bold;
 }
 .project-description {
-  font-size: 1em;
+  font-size: 2vmin;
   font-weight: 300;
+}
+.skill-card {
+  overflow: scroll;
+}
+.no-left-right-padding {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 </style>

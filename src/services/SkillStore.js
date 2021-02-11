@@ -109,7 +109,7 @@ const SkillStore = {
       ]
     },
     {
-      Name: 'Databases',
+      Name: 'DB',
       SkillLevel: 50,
 
       Img: require('@/assets/mongodb.png'),
