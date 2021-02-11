@@ -41,8 +41,7 @@
             This virtual CV was done to showcase quickly about different
             technologies and projects I have taken part of. This project was
             made in 16 hours over the course of two days. Every part of the
-            program was done by hand and without outside help. This project is
-            made public and the source code is free to be used.
+            program was done by hand and without outside help.
           </v-card-text>
           <v-card-text right>
             <v-timeline align-top dense>
