@@ -71,6 +71,8 @@ export default {
   min-width: 45%;
   float: left;
   order: 1;
+  padding-right: 0;
+  border-right: black solid 4px;
 }
 .skill-card {
   max-width: 50%;

@@ -2,7 +2,7 @@ const SkillStore = {
   data: [
     {
       Name: 'Vue',
-      SkillLevel: 80,
+      SkillLevel: 85,
       Img: require('@/assets/vue.png'),
       Projects: [
         {
@@ -48,39 +48,19 @@ const SkillStore = {
       ]
     },
     {
-      Name: 'React',
-      SkillLevel: 65,
-
-      Img: require('@/assets/react.png'),
-      Projects: [
-        {
-          name: 'Insta DefSec - secret project',
-          link: '',
-          description:
-            'Handled alone transfering existing codebase into mobile friendly. This included plenty of refactoring and infrastructure changes. After which few new features were implemented.'
-        },
-        {
-          name: 'Kyykkä - Referee reporting service',
-          link: '',
-          description:
-            'Worked as a developer for a volunteer project where we implemented software for referees to report scores. I handled few features including point reporting and user managing.'
-        }
-      ]
-    },
-    {
       Name: 'C++',
       SkillLevel: 70,
 
       Img: require('@/assets/c++.png'),
       Projects: [
         {
-          name: 'ACGO - e100 electrical tractor terminal',
+          name: 'ACGO - E100 electrical tractor terminal',
           link: '',
           description:
             'Worked as a solo developer for electircal tractors terminal. This included communicating with customer, testing on development, creating backend on CAN-bus and designing user interface.'
         },
         {
-          name: 'Aurora project',
+          name: 'Aurora Project',
           link: 'https://github.com/kalaztaja/project-aurora',
           description:
             'Worked as a developer and a project lead for Aurora powertrains. As a group we developed low-level software for eSled.'
@@ -93,6 +73,27 @@ const SkillStore = {
         }
       ]
     },
+    {
+      Name: 'React',
+      SkillLevel: 65,
+
+      Img: require('@/assets/react.png'),
+      Projects: [
+        {
+          name: 'Insta DefSec - Private project',
+          link: '',
+          description:
+            'Handled alone transfering existing codebase into mobile friendly. This included plenty of refactoring and infrastructure changes. After which few new features were implemented.'
+        },
+        {
+          name: 'Kyykkä - Referee reporting service',
+          link: '',
+          description:
+            'Worked as a developer for a volunteer project where we implemented software for referees to report scores. I handled few features including point reporting and user managing.'
+        }
+      ]
+    },
+
     {
       Name: 'Flutter',
       SkillLevel: 60,
@@ -109,18 +110,18 @@ const SkillStore = {
     },
     {
       Name: 'Databases',
-      SkillLevel: 60,
+      SkillLevel: 50,
 
       Img: require('@/assets/mongodb.png'),
       Projects: [
         {
-          name: 'Course: Database designing - SQL',
+          name: 'Database designing - SQL',
           link: '',
           description:
             'Made designs for SQL database which handled customer data as specified. The software handled medical records and was made for a learning experience.'
         },
         {
-          name: 'SmashVersus - Firebase backend for tournament ',
+          name: 'SmashVersus - Firebase Backend',
           link: 'https://gitlab.com/kalaztaja/smashversus',
           description:
             'Made basic level backend for easy tournament handling. This project was never finished but is still functional!'

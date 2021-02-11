@@ -13,7 +13,7 @@
         v-bind:key="indx"
       >
         <v-col cols="12">
-          <v-card class="fluid" :color="cardColors[indx % 2]">
+          <v-card class="skill-card" :color="cardColors[indx % 2]">
             <v-card-title class="project-name"
               >{{ project.name }}
             </v-card-title>
@@ -96,7 +96,7 @@ export default {
   grid-column-start: 1;
   grid-column-end: 3;
   overflow-y: scroll;
-  min-width: 800px;
+  min-width: 600px;
 }
 .skill-name {
   font-size: 2em;
@@ -106,5 +106,9 @@ export default {
 .project-name {
   font-size: 1.5em;
   font-weight: bold;
+}
+.project-description {
+  font-size: 1em;
+  font-weight: 300;
 }
 </style>
