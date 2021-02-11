@@ -1,28 +1,52 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-card class="overflow-hidden" tile flex height="100%" dark>
+      <v-main class="content-container">
+        <v-container fluid fill-height>
+          <introduction-card></introduction-card>
+          <skill-catalog width="100%" />
+        </v-container>
+      </v-main>
+    </v-card>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import IntroductionCard from './components/IntroductionCard.vue';
+import SkillCatalog from './components/SkillCatalog.vue';
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    SkillCatalog,
+    IntroductionCard
+  },
+
+  data: () => ({
+    //
+  })
+};
 </script>
 
+<style scoped>
+.bottom-card {
+  overflow: hidden !important;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+.content-container {
+  min-height: 100vh;
+  overflow-y: hidden !important;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+</style>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html {
+  overflow-y: auto !important;
 }
 </style>
