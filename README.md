@@ -1,24 +1,10 @@
-# cv-page
+# Outdated project
+
+# This was done in one afternoon to test what is feasible to achieve on one efficient spurt
+However, this was done in the early 2021, so the takeaways from here are somewhat outdated
 
 ## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
